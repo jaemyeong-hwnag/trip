@@ -1,0 +1,39 @@
+CRITICAL - 2020-09-15 21:21:49 --> Undefined variable: list
+#0 /var/www/html/php/trip/app/Views/index.php(281): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/php/trip/system/View/View.php(246): include('/var/www/html/p...')
+#2 /var/www/html/php/trip/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/php/trip/app/Controllers/BaseController.php(76): view()
+#4 /var/www/html/php/trip/app/Controllers/Home.php(8): App\Controllers\BaseController->view()
+#5 /var/www/html/php/trip/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/html/php/trip/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/php/trip/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/php/trip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-15 21:21:59 --> Undefined variable: list
+#0 /var/www/html/php/trip/app/Views/index.php(281): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/php/trip/system/View/View.php(246): include('/var/www/html/p...')
+#2 /var/www/html/php/trip/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/php/trip/app/Controllers/BaseController.php(76): view()
+#4 /var/www/html/php/trip/app/Controllers/Home.php(8): App\Controllers\BaseController->view()
+#5 /var/www/html/php/trip/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/html/php/trip/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/php/trip/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/php/trip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-15 22:00:11 --> Class 'App\Entities\User' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-09-15 22:00:38 --> Class 'App\Entities\User' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-09-15 22:07:53 --> Trying to get property 'no' of non-object
+#0 /var/www/html/php/trip/app/Views/home.php(279): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/php/trip/system/View/View.php(246): include('/var/www/html/p...')
+#2 /var/www/html/php/trip/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/php/trip/app/Controllers/BaseController.php(72): view()
+#4 /var/www/html/php/trip/app/Controllers/Home.php(8): App\Controllers\BaseController->view()
+#5 /var/www/html/php/trip/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/html/php/trip/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/php/trip/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/php/trip/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
