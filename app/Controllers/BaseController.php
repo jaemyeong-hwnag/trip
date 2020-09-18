@@ -39,6 +39,12 @@ class BaseController extends Controller
      */
     protected $uri = '';
 
+    /**
+     * @var array
+     */
+    protected $post = [];
+    protected $get = [];
+
 	/**
 	 * Constructor.
 	 */
@@ -49,6 +55,10 @@ class BaseController extends Controller
 		parent::initController($request, $response, $logger);
         $this->uri = current_url(true);
         $this->segments = $this->uri->getSegments();
+
+        $request = service('request');
+        $this->get = $request->getGet();
+        $this->post = $request->getPost();
 
 		//--------------------------------------------------------------------
 		// Preload any models, libraries, etc, here.
@@ -65,15 +75,12 @@ class BaseController extends Controller
 	public function view( $args = [] ){
         $segments = $this->segments;
         $data = arrayCheck( $args, 'data' ) ? arrayCheck( $args, 'data' ) : [];
-        $viewName = array_pop($segments) ? array_pop($segments) : 'home';
-
-        if($viewName) {
-            if ($data) {
-                return view($viewName, $data);
-            }
+        if( !$viewName = arrayCheck( $args, 'view' ) ) {
+            $viewName = array_pop($segments);
+            $viewName = $viewName ? $viewName : 'home';
         }
 
-        return view("home", $data);
+        return view($viewName, $data);
     }
 
 }

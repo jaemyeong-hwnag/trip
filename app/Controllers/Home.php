@@ -11,7 +11,7 @@ class Home extends BaseController
 	//--------------------------------------------------------------------
 
     protected function index_data(){
-        $tourModel = new \App\Models\TourModel();
+        $tourModel = model('TourModel');
 
         $data["total_count"] = $tourModel->countAll();
         $data["k_count"] = $tourModel->where('no',8)->countAll();
