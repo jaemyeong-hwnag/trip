@@ -33,6 +33,8 @@ class Login extends BaseController
     }
 
     public function logout(){
+        $this->session->remove(['no', 'name']);
 
+        return $this->view(['view' => 'home']);
     }
 }
