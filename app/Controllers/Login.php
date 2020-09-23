@@ -29,12 +29,12 @@ class Login extends BaseController
             $rtn_view = 'home';
         }
 
-        return $this->view( [ 'view'=>$rtn_view ] );
+        return redirect()->to('./'.$rtn_view);
     }
 
     public function logout(){
         $this->session->remove(['no', 'name']);
 
-        return $this->view(['view' => 'home']);
+        return redirect()->to('./home');
     }
 }
