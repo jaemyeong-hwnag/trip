@@ -20,16 +20,15 @@ class Login extends BaseController
         $rtn_view = 'login';
         $post = $this->post;
 
-        $where = [ 'uid' => $post['uid'], 'pwd' => $post['pwd'] ];
-
-        $user = $this->loginModel->asArray()->where($where)->findAll(1)[0];
+        $where = "uid = '{$post['uid']}' AND pwd = PASSWORD('{$post['pwd']}')";
+        $user = $this->loginModel->where($where)->first();
 
         if($user){
-            $this->session->set([ 'no' => $user['no'], 'name' => $user['name'] ]);
+            $this->session->set([ 'no' => $user->no, 'name' => $user->name ]);
             $rtn_view = 'home';
         }
 
-        return redirect()->to('./'.$rtn_view);
+        return redirect()->to( './' . $rtn_view );
     }
 
     public function logout(){

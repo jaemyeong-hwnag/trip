@@ -1,5 +1,5 @@
 <?= $this->extend('_layout/index') ?>
-
+<?var_dump("egsdgdsg");?>
 <?= $this->section('content') ?>
 <div>
     <h3 class="agile-title">Login</h3>
@@ -17,7 +17,7 @@
                     <div class="control-group form-group">
                         <div class="controls">
                             <label class="contact-p1">비밀번호</label>
-                            <input type="passwd" class="form-control" name="pwd" id="pwd" value="">
+                            <input type="password" class="form-control" name="pwd" id="pwd" value="">
                             <p class="help-block"></p>
                         </div>
                     </div>
