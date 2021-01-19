@@ -13,7 +13,7 @@ class Login extends BaseController
 
     public function index()
     {
-        return $this->view();
+        return view();
     }
 
     public function login(){
