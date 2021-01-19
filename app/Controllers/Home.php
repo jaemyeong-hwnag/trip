@@ -5,11 +5,13 @@ class Home extends BaseController
 	public function index()
 	{
 	    $data = $this->index_data();
-		return $this->view( ['data' => $data]);
+		return view( "home", ['data' => $data] );
 	}
 
-	//--------------------------------------------------------------------
-
+    /**
+     * @see home에 필요한 정보 가져오기
+     * @return array $data
+     */
     protected function index_data(){
         $tourModel = model('TourModel');
 

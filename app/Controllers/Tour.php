@@ -4,7 +4,7 @@ class Tour extends BaseController
 {
 	public function index()
 	{
-
+        
 	}
 
     /**
@@ -16,7 +16,7 @@ class Tour extends BaseController
         if(!$no) return redirect()->to( './home' );
         $data['row'] = $this->get_row($no);
 
-        return view( 'tourView', $data);
+        return view( 'tourView', $data );
     }
 
 	//--------------------------------------------------------------------
