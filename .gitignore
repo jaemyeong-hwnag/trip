@@ -5,3 +5,4 @@
 .idea/workspace.xml
 .idea/codeStyles/codeStyleConfig.xml
 .env
+.vscode/sftp.json

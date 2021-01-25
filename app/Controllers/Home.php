@@ -4,15 +4,15 @@ class Home extends BaseController
 {
 	public function index()
 	{
-	    $data = $this->index_data();
-		return view( "home", ['data' => $data] );
+	    $data = $this->getHomeData();
+		return view( "home", $data );
 	}
 
     /**
      * @see home에 필요한 정보 가져오기
      * @return array $data
      */
-    protected function index_data(){
+    private function getHomeData(){
         $tourModel = model('TourModel');
 
         $data["total_count"] = $tourModel->countAll();
