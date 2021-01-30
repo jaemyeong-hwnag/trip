@@ -1,6 +1,7 @@
 
         <!-- css -->
         <link rel="stylesheet" href="/css/trip.css">
+        <link rel="stylesheet" href="/css/my.css">
         <!-- /css -->
 
         <!-- plugins -->
