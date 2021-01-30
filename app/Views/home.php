@@ -158,8 +158,8 @@
         <div class="container">
             <div class="about-top w3ls-agile">
                 <div class="col-md-6 red-w3l">
-                    <img class="img-responsive" src="/php/trip/public/asset/images/bg/well2.jpg" alt="">
-                    <img class="img-responsive" src="/php/trip/public/asset/images/bg/well.jpg" alt="">
+                    <img class="img-responsive" src="/assets/images/bg/well2.jpg" alt="">
+                    <img class="img-responsive" src="/assets/images/bg/well.jpg" alt="">
                     <div class="position-w3l"></div>
                 </div>
                 <div class="col-md-6 come">
@@ -234,14 +234,14 @@
                 ?>
                 <div class="col-md-6 w3lsalbums-grid">
                     <div class="albums-left">
-                        <div> <img src="/php/trip/public/asset/images/tour_img/<?=$row->pic ?>" class="wthree-almub" height="250px" alt=""/>
+                        <div> <img src="/images//tour_img/<?=$row->pic ?>" class="wthree-almub" height="250px" alt=""/>
                         </div>
                     </div>
                     <div class="albums-right font_white">
                         <span class="text_none_over" style="width: 210px;"><?=$row->name ?></span>
                         <p class="fa-kr-default text_none_over" style="width: 210px; height: 50px;"><?=$row->txt; ?></p>
                         <p><?=number_format($row->price) ?>원</p>
-                        <a class="w3more" href="/~team19/tour1/view/no/<?=$no;?>"><i class="fa fa-mail-forward" aria-hidden="true"></i> More</a>
+                        <a class="w3more" href="/tour1/view/no/<?=$no;?>"><i class="fa fa-mail-forward" aria-hidden="true"></i> More</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
