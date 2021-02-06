@@ -227,26 +227,21 @@
             <div class="w3layouts_header">
                 <p><span><i class="fa fa-plane sub-w3l" aria-hidden="true"></i></span></p>
             </div>
-<?php
-    foreach ($tour_rnadom_list as $row) {
-        $no = $row['no'];
-?>
+<?php foreach ($tour_list as $row) { ?>
                 <div class="col-md-6 w3lsalbums-grid">
                     <div class="albums-left">
                         <div> <img src="/images//tour_img/<?=$row['pic'] ?>" class="wthree-almub" height="250px" alt=""/>
                         </div>
                     </div>
                     <div class="albums-right font_white">
-                        <span class="text_none_over" style="width: 210px;"><?=$row['name'] ?></span>
-                        <p class="fa-kr-default text_none_over" style="width: 210px; height: 50px;"><?=$row['txt']; ?></p>
-                        <p><?=number_format($row['price']) ?>원</p>
-                        <a class="w3more" href="/tour/tourView/<?=$no;?>"><i class="fa fa-mail-forward" aria-hidden="true"></i> More</a>
+                        <span class="text_none_over" style="width: 210px;"><?= $row['name'] ?></span>
+                        <p class="fa-kr-default text_none_over" style="width: 210px; height: 50px;"><?= $row['txt']; ?></p>
+                        <p><?= number_format($row['price']) ?>원</p>
+                        <a class="w3more" href="/tour/tourView/<?= $row['no'] ?>"><i class="fa fa-mail-forward" aria-hidden="true"></i> More</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-<?php
-    }
-?>
+<?php } ?>
             <div class="clearfix"></div>
         </div>
     </div>
