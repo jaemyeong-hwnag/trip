@@ -1,25 +1,22 @@
 <?php namespace App\Controllers;
 
+use App\Models\HomeModel;
+
 class Home extends BaseController
 {
+    private $tourModel; // 모델 변수
+
+    public function __construct()
+    {
+        $this->tourModel = new HomeModel(); // TourModel 생성
+    }
+
 	public function index()
 	{
-	    $data = $this->getHomeData();
+        $tourModel = $this->tourModel; // TourModel
+
+	    $data = $tourModel->getHomeList(); // Home에서 사용 하는 데이터
+
 		return view( "home", $data );
 	}
-
-    /**
-     * @see home에 필요한 정보 가져오기
-     * @return array $data
-     */
-    private function getHomeData(){
-        $tourModel = model('TourModel');
-
-        $data["total_count"] = $tourModel->countAll();
-        $data["k_count"] = $tourModel->where('no',8)->countAll();
-        $data["h_count"] = $tourModel->where('no',7)->countAll();
-        $data["list"] = $tourModel->orderBy('no', 'RANDOM')->findAll(4);
-
-        return $data;
-    }
 }
