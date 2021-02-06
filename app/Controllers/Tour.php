@@ -1,33 +1,28 @@
 <?php namespace App\Controllers;
 
+use App\Models\TourModel;
+use CodeIgniter\Controller;
 class Tour extends BaseController
 {
-	public function index()
-	{
-        
-	}
+    private $tourModel; // TourModel
+
+    public function __construct()
+    {
+       $this->tourModel = new TourModel(); // TourModel 생성
+    }
 
     /**
      * view tour product
-     * @param int $no
-     * @return \CodeIgniter\HTTP\RedirectResponse|string
+     * @param int $no 조회 할 tour 키
+     * @return view
      */
-	public function detail( int $no ){
-        if(!$no) return redirect()->to( './home' );
-        $data['row'] = $this->get_row($no);
+    public function tourView(int $no = null)
+    {
+        if($no == null) return redirect()->to('/home'); // 홈 으로
 
-        return view( 'tourView', $data );
-    }
+        $tourModel = $this->tourModel; // TourModel
+        $data = $tourModel->getTourView($no); // data
 
-	//--------------------------------------------------------------------
-
-    /**
-     * select DB tour in no field
-     * @param $no
-     * @return array
-     */
-    private function get_row( $no ){
-        $tourModel = model('TourModel');
-        return $tourModel->find( $no );
+        return view('/tour/tourView', $data);
     }
 }
