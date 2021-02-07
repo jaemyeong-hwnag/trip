@@ -21,7 +21,7 @@
                         </button>
                     </div> 
                     <div class="logo-agile-1"> 
-                        <h1><a class="logo" href="/main"><i class="fa fa-plane" aria-hidden="true"></i>Tourism</a></h1>
+                        <h1><a class="logo" href="/"><i class="fa fa-plane" aria-hidden="true"></i>Tourism</a></h1>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">

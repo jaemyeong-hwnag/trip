@@ -230,14 +230,14 @@
 <?php foreach ($tour_list as $row) { ?>
                 <div class="col-md-6 w3lsalbums-grid">
                     <div class="albums-left">
-                        <div> <img src="/images//tour_img/<?=$row['pic'] ?>" class="wthree-almub" height="250px" alt=""/>
+                        <div> <img src="/images//tour_img/<?= $row['tour_picture'] ?>" class="wthree-almub" height="250px" alt=""/>
                         </div>
                     </div>
                     <div class="albums-right font_white">
-                        <span class="text_none_over" style="width: 210px;"><?= $row['name'] ?></span>
-                        <p class="fa-kr-default text_none_over" style="width: 210px; height: 50px;"><?= $row['txt']; ?></p>
-                        <p><?= number_format($row['price']) ?>원</p>
-                        <a class="w3more" href="/tour/tourView/<?= $row['no'] ?>"><i class="fa fa-mail-forward" aria-hidden="true"></i> More</a>
+                        <span class="text_none_over" style="width: 210px;"><?= $row['tour_name'] ?></span>
+                        <p class="fa-kr-default text_none_over" style="width: 210px; height: 50px;"><?= $row['tour_text']; ?></p>
+                        <p><?= number_format($row['tour_price']) ?>원</p>
+                        <a class="w3more" href="/tour/tourView/<?= $row['tour_no'] ?>"><i class="fa fa-mail-forward" aria-hidden="true"></i> More</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>

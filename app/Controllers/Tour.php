@@ -12,16 +12,17 @@ class Tour extends BaseController
     }
 
     /**
-     * view tour product
-     * @param int $no 조회 할 tour 키
+     * 상품 상세페이지
+     * 
+     * @param int $tour_no 조회 할 tour 키
      * @return view
      */
-    public function tourView(int $no = null)
+    public function tourView(int $tour_no = null)
     {
-        if($no == null) return redirect()->to('/home'); // 홈 으로
+        if($tour_no == null) return redirect()->to('/home'); // 홈 으로
 
         $tourModel = $this->tourModel; // TourModel
-        $data = $tourModel->getTourView($no); // data
+        $data = $tourModel->getTourView($tour_no); // data
 
         return view('/tour/tourView', $data);
     }
