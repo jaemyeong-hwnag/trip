@@ -1,6 +1,6 @@
 # trip
   온라인 여행 대행 서비스
-  193.123.253.106
+  http://trip.trun.ml/
 
 * Author : W3layouts
 * Author URL : http://w3layouts.com
