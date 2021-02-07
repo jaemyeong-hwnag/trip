@@ -6,42 +6,42 @@
 <script>
 	$(function(){ 
 		$('.bt_up1').click(function(){ 
-		var num = +$(".price1").val()+1;
-		$(".price1").val(num);
+			var num = +$(".price1").val()+1;
+			$(".price1").val(num);
 		});
 
 		$('.bt_down1').click(function(){ 
-		var num = +$(".price1").val()-1;
-		if(num>-1) $(".price1").val(num);
+			var num = +$(".price1").val()-1;
+			if(num>-1) $(".price1").val(num);
 		});
 
 		$('.bt_up2').click(function(){ 
-		var num = +$(".price2").val()+1;
-		$(".price2").val(num);
+			var num = +$(".price2").val()+1;
+			$(".price2").val(num);
 		});
 
 		$('.bt_down2').click(function(){ 
-		var num = +$(".price2").val()-1;
-		if(num>-1) $(".price2").val(num);
+			var num = +$(".price2").val()-1;
+			if(num>-1) $(".price2").val(num);
 		});
 
 		$("#sdate") .datetimepicker({
 			locale: "ko",
 			format: "YYYY-MM-DD",
 			defaultDate: moment()
-			});
 		});
 
 		$("#edate") .datetimepicker({
-		locale: "ko",
-		format: "YYYY-MM-DD",
-		defaultDate: moment()
+			locale: "ko",
+			format: "YYYY-MM-DD",
+			defaultDate: moment()
+		});
 	});
 </script>
 		<div class="container" bgcolor="black">
 		<!----- 이름 ------->
 		 <br><br><br>
-		<h3 class="agile-title"><?= $name ?></h3> 
+		<h3 class="agile-title"><?= $tour_name ?></h3> 
 		<div class="w3layouts_header">
 			<p><span><i class="fa fa-plane sub-w3l" aria-hidden="true"></i></span></p>
 		</div>
@@ -64,31 +64,31 @@
                 <div class="col-sm-6">
                   <div data-slider-id="1" class="owl-carousel shop-detail-carousel">
 
-                    <div class="col-10"> <img src="/images/tour_img/<?= $pic ?>" alt="" class="img-fluid" width="700px" height="450px"></div>
+                    <div class="col-10"> <img src="/images/tour_img/<?= $tour_picture ?>" alt="" class="img-fluid" width="700px" height="450px"></div>
                   </div>
                 </div>
                 <div class="col-sm-6" align="center">
                   <div class="box">
-                    <form name="form1" action="/tour1/add/no/<?= $no ?>" method="post">
+                    <form name="form1" action="/tour1/add/no/<?= $tour_no ?>" method="post">
                       <div class="sizes" align="center">
 						<div class="alert alert-info" style="margin: 0 100px 38px 110px;" role="alert"></div>
-						<div align="center"><h4><?=number_format($price) ?> 원</h4></div>
+						<div align="center"><h4><?=number_format($tour_price) ?> 원</h4></div>
 						<br>
-								<input type="hidden" name="sdate" value="<?=$sdate?>">
-								<input type="hidden" name="price" value="<?=$price?>">
+								<input type="hidden" name="sdate" value="<?=$start_date?>">
+								<input type="hidden" name="price" value="<?=$tour_price?>">
 								<input type="hidden" value="" name="writeday" id="writeday">
 								<input type="hidden" value="" name="board_no" id="board_no">
 								<input type="hidden" value=""name="name" id="name">
 								<div>
 									<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-									<?=$sdate?>~<?=$edate?>
+									<?=$start_date?>~<?=$end_date?>
 								</div>
 							<div class="row">
 							<div class="col-6">
 								<div class="form-group">
 									<label>성인</label>
 									<div class="numbers-row">
-                                        <input type="number" min="0" value="1" style="width:15%; display: inline;" id="count" class="qty2 form-control price1" name="price1" onchange="count1();">
+                                        <input type="number" min="0" value="1" style="width:15%; display: inline;" id="count" class="qty2 form-control price1" name="price1">
 									</div>
 								</div>
 							</div>
@@ -96,7 +96,7 @@
 								<div class="form-group">
 									<label>어린이</label>
 									<div class="numbers-row">
-										<input type="number" value="0"  min="0" id="countb" style="width:15%; display: inline;" class="qty2 form-control price2" name="price2" onchange="count1();">
+										<input type="number" value="0"  min="0" id="countb" style="width:15%; display: inline;" class="qty2 form-control price2" name="price2">
 									</div>
 								</div>
 							</div>
@@ -122,16 +122,16 @@
 				<h4>Air</h4>
 				<br>
                 <ul>
-                  <li><?=$air_name?></li>
+                  <li><?=$airline_name?></li>
                 </ul>
 				<hr>
                 <h4>Date</h4>
 				<br>
                 <ul>
-                  <li>날짜 : <?=$sdate?> ~ <?=$sdate?></li>
+                  <li>날짜 : <?=$start_date?> ~ <?=$end_date?></li>
                 </ul>
 				<hr>
-                <p class="fa-kr-default" style="color:black;"><?= $txt ?></p>
+                <p class="fa-kr-default" style="color:black;"><?= $tour_text ?></p>
 				<hr>
                 <blockquote class="blockquote">
                   <p class="mb-0"><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em></p>
@@ -153,25 +153,5 @@
            </div>
 		  
 		   </div></div></div>
-
-		   <!-- Modal -->
-            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						로그인이 안 되어있습니다.
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-					</div>
-				</div>
-            </div>
-            <!-- /Modal -->
 
     <?= $this->endSection() ?>
