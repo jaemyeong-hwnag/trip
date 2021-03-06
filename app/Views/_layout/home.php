@@ -30,12 +30,7 @@
                     <?
                     $uri = current_url(true);
                     $activePage=urldecode($uri);
-                    ?>
-                    <li><a class="<?=  ($activePage=='package_tour_list') ? 'active':''; ?>" href="/~team19/tour1/package_tour_list">패키지 여행</a></li>
-                    <li class="<?=  ($activePage=='foreign_tour_list') ? 'active':''; ?>"><a href="/~team19/tour1/foreign_tour_list">해외 여행</a></li>
-                    <li><a class="<?=  ($activePage=='domestic_tour_list') ? 'active':''; ?>" href="/~team19/tour1/domestic_tour_list">국내 여행</a></li>
-                    <li class="<?=  ($activePage=='developer') ? 'active':''; ?>"><a href="/~team19/team19/developer">개발자</a></li>
-                    <?
+
                     if($session->no!=null||$session->no=="0"){
                         echo("
 							<li class='dropdown menu__item menu__item--current m_nav_item'>
@@ -58,13 +53,13 @@
                     <li><a class="" href="contact.html">Contact Us</a></li>-->
 
                 </ul>
-                <ul class="nav navbar-nav navbar-left fa-kr-default">
+                <ul class="nav navbar-nav navbar-right fa-kr-default">
                     <li>
                         <?
                         if($session->no==null) {
-                            echo("<li><a class='login' href='./login'><i class='fa fa-lock'></i></a></li>");
+                            echo("<li><a class='login' href='./user/loginview'><i class='fa fa-lock'></i>로그인</a></li>");
                         }
-                        else if($session->no!=null||$session->no=="0"){
+                        else {
 
                             echo("
 							<li><a class='mypage' href='/~team19/mypage'><i class='glyphicon glyphicon-user'></i></a></li>");
