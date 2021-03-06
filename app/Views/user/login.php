@@ -22,7 +22,7 @@
                     </div>
                     <div align="center">
                         <button type="button" class="btn btn2" onClick="javascript:loginProc();">로그인</button>
-                        <a href="/signup" class="btn btn2">회원가입</a>
+                        <a href="/user/registerView" class="btn btn2">회원가입</a>
                     </div>
             </form>
         </div>
