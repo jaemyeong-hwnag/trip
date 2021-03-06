@@ -1,5 +1,6 @@
 
         <!-- css -->
+        <link rel="stylesheet" href="/plugins/bootstrap-3.3.2-dist/css/bootstrap.css"> <!-- bootstrap -->
         <link rel="stylesheet" href="/css/trip.css">
         <link rel="stylesheet" href="/css/my.css">
         <!-- /css -->
@@ -14,7 +15,6 @@
         <script src="https://kit.fontawesome.com/2739addc6b.js" crossorigin="anonymous"></script> <!-- fontawesome -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-        <link rel="stylesheet" href="/plugins/bootstrap-3.3.2-dist/css/bootstrap.css"> <!-- bootstrap -->
         <script src="/plugins/bootstrap-3.3.2-dist/js/bootstrap.js"></script> <!-- bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!-- sweetalert -->
         <!-- /plugins -->
