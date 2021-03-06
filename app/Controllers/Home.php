@@ -16,7 +16,8 @@ class Home extends BaseController
         $tourModel = $this->tourModel; // TourModel
 
 	    $data = $tourModel->getHomeList(); // Home에서 사용 하는 데이터
+        $view = view( "home", $data );
 
-		return view( "home", $data );
+		return $view;
 	}
 }

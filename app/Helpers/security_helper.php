@@ -7,10 +7,10 @@
     function getAesEncrypt($text)
     {
         $encryption_key = env("encryption.key", null);
-        $encryption_iv = env("encryption.iv", null);
+        $encryption_iv = str_repeat(chr(0), 16);
         $encryption_way = env("encryption.way", null);
 
-        $encrypted = @openssl_encrypt($text, $encryption_way, $encryption_key, true, $encryption_iv); // 평문인 암호를 암호화 하여 저장
+        $encrypted = openssl_encrypt($text, $encryption_way, $encryption_key, true, $encryption_iv); // 평문인 암호를 암호화 하여 저장
         $encrypted = base64_encode($encrypted);
 
         return $encrypted;
@@ -24,11 +24,11 @@
     function getAesDecrypt($encrypted)
     {
         $encryption_key = env("encryption.key", null);
-        $encryption_iv = env("encryption.iv", null);
+        $encryption_iv = str_repeat(chr(0), 16);
         $encryption_way = env("encryption.way", null);
 
         $encrypted = base64_decode($encrypted);
-        $text = @openssl_decrypt($encrypted, $encryption_way, $encryption_key, true, $encryption_iv); // 복호화
+        $text = openssl_decrypt($encrypted, $encryption_way, $encryption_key, true, $encryption_iv); // 복호화
 
         return $text;
     }

@@ -56,14 +56,11 @@
                 <ul class="nav navbar-nav navbar-right fa-kr-default">
                     <li>
                         <?
-                        if($session->no==null) {
-                            echo("<li><a class='login' href='./user/loginview'><i class='fa fa-lock'></i>로그인</a></li>");
+                        if($session->user_id == null) {
+                            echo("<li><a class='login' href='/user/loginview'><i class='fa fa-lock'></i>로그인</a></li>");
                         }
                         else {
-
-                            echo("
-							<li><a class='mypage' href='/~team19/mypage'><i class='glyphicon glyphicon-user'></i></a></li>");
-                            echo("<li><a class='login' href='./login/logout'>Logout</i></a></li>");
+                            echo("<li><a class='login' href='/user/logout'><i class='fa fa-lock'></i>로그아웃</a></li>");
                         }
                         ?>
                     </li>
