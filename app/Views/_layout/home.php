@@ -58,9 +58,11 @@
                         <?
                         if($session->user_id == null) {
                             echo("<li><a class='login' href='/user/loginview'><i class='fa fa-lock'></i>로그인</a></li>");
+                            echo("<li><a class='login' href='/tour/tourList'>여행리스트</a></li>");
                         }
                         else {
                             echo("<li><a class='login' href='/user/logout'><i class='fa fa-lock'></i>로그아웃</a></li>");
+                            echo("<li><a class='login' href='/tour/tourList'>여행리스트</a></li>");
                         }
                         ?>
                     </li>

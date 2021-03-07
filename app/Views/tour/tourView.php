@@ -1,6 +1,5 @@
 
 <?= $this->extend('_layout/index') ?>
-
 <?= $this->section('content') ?>
 
 <script>
@@ -106,7 +105,7 @@
 					  <hr style="margin: 10px 100px;" >
                       
                       <p class="text-center">
-						<button href="/login" data-toggle="tooltip" data-placement="top" title="Add to wishlist" class="btn  fa-kr-default" style="margin:0;"><i class="fa fa-plane"></i>  예약하기 </button>
+						<button name="payment" data-toggle="tooltip" data-placement="top" title="Add to wishlist" class="btn  fa-kr-default" style="margin:0;"><i class="fa fa-plane"></i>  결제하기 </button>
                       </p>
                     </form>
                   </div>
@@ -152,6 +151,8 @@
             </div>
            </div>
 		  
-		   </div></div></div>
+		   </div>
+		   </div>
+		   </div>
 
     <?= $this->endSection() ?>
