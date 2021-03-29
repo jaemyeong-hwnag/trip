@@ -33,3 +33,31 @@
  - /.env 파일에 암호화 정보 저장
  - /app/Helpers/security_helper.php 암복호화 함수
  - /app/Controllers/BaseController.php에 보안관련 헬퍼 불러오기
+
+## Controllers 정보
+ - FILTER_SANITIZE_SPECIAL_CHARS : 매개변수 혹은 파라미터의 값의 특수문자 이스케이프
+
+ ## 헬퍼(helper)
+  - security_helper.php
+   - 암복호화 파일
+   - .env의 정보를 가지고 암복호화 함수
+## ssl 적용
+```
+# vi httpd-le-ssl.conf
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+ ServerName trip.trun.ml
+ DocumentRoot /var/www/html/php/trip/public/
+RewriteEngine on
+# Some rewrite rules in this file were disabled on your HTTPS site,
+# because they have the potential to create redirection loops.
+
+# RewriteCond %{SERVER_NAME} =trip.trun.ml
+# RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+SSLCertificateFile /etc/letsencrypt/live/trip.trun.ml/cert.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/trip.trun.ml/privkey.pem
+Include /etc/letsencrypt/options-ssl-apache.conf
+SSLCertificateChainFile /etc/letsencrypt/live/trip.trun.ml/chain.pem
+</VirtualHost>
+</IfModule>
+```
