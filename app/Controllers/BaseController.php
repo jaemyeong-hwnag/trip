@@ -41,7 +41,6 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		helper(["security"]); // 보안관련
-		// $this->session = \Config\Services::session();
 	}
 
 }

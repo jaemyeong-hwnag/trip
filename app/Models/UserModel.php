@@ -2,7 +2,7 @@
 
 use CodeIgniter\Model;
 
-class UserModel extends BaseModel
+class UserModel extends Model
 {
     /**
 	 * @see 회원가입
