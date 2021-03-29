@@ -1,5 +1,5 @@
 
-<?= $this->extend('_layout/index') ?>
+<?= $this->extend('layout/index') ?>
 <?= $this->section('content') ?>
 
 <script>

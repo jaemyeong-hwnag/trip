@@ -1,4 +1,4 @@
-<?= $this->extend('_layout/index') ?>
+<?= $this->extend('layout/index') ?>
 <?= $this->section('content') ?>
 <div>
 	<div class="col-3"></div>

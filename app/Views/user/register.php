@@ -1,4 +1,4 @@
-<?= $this->extend('_layout/index') ?>
+<?= $this->extend('layout/index') ?>
 <?= $this->section('content') ?>
 <h3 class="agile-title">회원가입</h3>
 <div class="w3layouts_header">
