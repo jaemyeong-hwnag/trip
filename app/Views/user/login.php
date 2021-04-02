@@ -1,4 +1,4 @@
-<?= $this->extend('_layout/index') ?>
+<?= $this->extend('layout/index') ?>
 <?= $this->section('content') ?>
 <div>
     <h3 class="agile-title">Login</h3>

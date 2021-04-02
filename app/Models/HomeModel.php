@@ -10,7 +10,7 @@ class HomeModel extends Model
      * 
      * @author 황재명
      * @see app\Controllers\Home.php
-     * @param none
+     * @param null
      * @return array $data
      */
     public function getHomeList()
